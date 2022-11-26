@@ -18,3 +18,8 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
     $(event.target).focus();
   });
 });
+
+function myFunction(smallImg) {
+  var lrgImg = document.getElementById("imageBox");
+  lrgImg.src = smallImg.src;
+}

@@ -1,13 +1,25 @@
+@font-face {
+  font-family: 'Helvetica Now Text';
+  src: url('HelveticaNowText-Bold.eot');
+  src: local('Helvetica Now Text  Bold'), local('HelveticaNowText-Bold'),
+      url('HelveticaNowText-Bold.eot?#iefix') format('embedded-opentype'),
+      url('HelveticaNowText-Bold.woff2') format('woff2'),
+      url('HelveticaNowText-Bold.woff') format('woff'),
+      url('HelveticaNowText-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   font-size: 16px;
   color: #fff;
-  background-color: red;
-  font-family: 'OleoScript' serif;
+  background-color:rgb(76, 163, 127);
+  font-family: 'Helvetica Now Text' serif;
 }
 
 /** HEADER **/
 #header-nav {
-  background-color: white;
+  background-color: rgb(81, 18, 129);
   border-radius: 0;
   border: 0;
 }
@@ -23,8 +35,8 @@ body {
   padding-top: 25px;
 }
 .navbar-brand h1 { /* Restaurant name */
-  font-family: 'Oleo Script', serif;
-  color: black;
+  font-family: 'Helvetica Now Text', serif;
+  color: #067dec;
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: bold;
@@ -37,7 +49,7 @@ body {
   text-decoration: none;
 }
 .navbar-brand p { /* Kosher cert */
-  color: #000;
+  color:  #067dec;
   text-transform: uppercase;
   font-size: .7em;
   margin-top: 15px;
@@ -50,7 +62,7 @@ body {
   margin-top: 10px;
 }
 #nav-list a {
-  color: red;
+  color: white;
   text-align: center;
 }
 #nav-list a:hover {
@@ -67,14 +79,14 @@ body {
   text-align: right;
   padding-bottom: 0;
 }
-#phone div { /* We Deliver */
+*#phone div { /* We Deliver */
   color: black;
   text-align: right;
   padding-right: 15px;
 }
 
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
-  border: 1px solid red;
+  border: 1px solid white;
 }
 .navbar-header button.navbar-toggle {
   clear: both;
@@ -116,8 +128,8 @@ body {
 
 /* HOME PAGE */
 .container .jumbotron {
-  box-shadow: 0 0 50px red;
-  border: 2px solid red;
+  box-shadow: 0 0 50px rgb(165, 225, 173);
+  border: 2px solid white;
 }
 
 #beer-menu-tile, #food-menu-tile, #map-tile {
@@ -125,18 +137,18 @@ body {
   width: 100%;
   margin-bottom: 15px;
   position: relative;
-  border: 2px solid red;
+  border: 2px solid white;
   overflow: hidden;
 }
 #beer-menu-tile:hover, #food-menu-tile:hover, #map-tile:hover {
   box-shadow: 0 1px 5px 1px #cccccc;
 }
 #beer-menu-tile {
-  background: url('../images/Beer-menu-tile.jpg') no-repeat;
+  background: url('../images/Ventas/Dell Insp 5420/img-1.jpg') no-repeat;
   background-position: center;
 }
 #food-menu-tile {
-  background: url('../images/Food-menu-tile.jpg') no-repeat;
+  background: url('../images/compras-menu-tile.png') no-repeat;
   background-position: center;
 }
 #beer-menu-tile span, #food-menu-tile span, #map-tile span {
@@ -201,7 +213,7 @@ body {
 }
 .menu-item-photo {
   position: relative;
-  border: 2px solid red;
+  border: 2px solid white;
   overflow: hidden;
   padding: 0;
   margin-right: -15px;
@@ -229,14 +241,50 @@ h3.menu-item-title {
 }
 /* END SINGLE CATEGORY PAGE */
 
+/* PRODUCT PAGE */  
+.flex-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.product-small-img img {
+  height: 92px;
+  margin: 10px 0;
+  cursor: pointer;
+  display: block;
+  opacity: 0.6;
+}
+.product-small-img img:hover {
+  opacity: 1;
+}
+
+
+.img-container img {
+  height: 500px;
+  
+}
+.img-container {
+  
+  padding: 10px;
+}
+/* END PRODUCT PAGE */
+#product-content {
+  height: 626px;
+  padding: 20px 0;
+}
+.product-item-description {
+  width: 150px;
+}
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
   .container .jumbotron {
-    background: url('../images/jumbotronPub_1200.jpg') no-repeat;
-    height: 675px;
-  }
+    background: url('../images/LaptopWorld1200.jpg') no-repeat;
+    height: 626px;
+  } 
 }
+
 
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -251,21 +299,55 @@ h3.menu-item-title {
 
   /* Home Page */
   .container .jumbotron {
-    background: url('../images/jumbotronPub_992.jpg') no-repeat;
-    height: 558px;
+    background: url('../images/LaptopWorld992.jpg') no-repeat;
+    height: 518px;
   }
   /* End Home Page */
+
+  /* Product Page */
+  .img-container img {
+    height: 400px;
+  }
+  #product-content {
+      height: 518px;
+  }
+  .product-small-img img {
+      height: 75px;
+      margin: 7.5px 0;
+      cursor: pointer;
+      display: block;
+      opacity: 0.6;
+  }
+  
 }
+/* End Product Page */
 
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
   /* Home Page */
   .container .jumbotron {
-    background: url('../images/jumbotronPub_768.jpg') no-repeat;
-    height: 432px;
+    background: url('../images/LaptopWorld768.jpg') no-repeat;
+    height: 401px;
   }
   /* End Home Page */
+  /* Product Page */
+  .img-container img {
+    height: 350px;
+  }
+  #product-content {
+      height: 401px;
+  }
+  .product-small-img img {
+      height: 65px;
+      margin: 7.5px 0;
+      cursor: pointer;
+      display: block;
+      opacity: 0.6;
+  }
+  
 }
+/* End Product Page */
+
 
 /********** Extra small devices only **********/
 @media (max-width: 767px) {
@@ -301,7 +383,7 @@ h3.menu-item-title {
     padding: 10px;
     border: 2px solid #fff;
     background-color: white9;
-    color: red;
+    color: white;
   }
   #xs-deliver {
     margin-top: 5px;
@@ -343,7 +425,26 @@ h3.menu-item-title {
   .menu-item-description {
     text-align: center;;
   }
+  /* Product Page */
+  .img-container img {
+    height: 250px;
+  }
+  #product-content {
+      height: 800px;
+  }
+  .product-small-img img {
+      height: 45px;
+      margin: 5px 0;
+      cursor: pointer;
+      display: block;
+      opacity: 0.6;
+  }
+  .flex-container {
+    flex-direction: column-reverse;
+  }
 }
+/* End Product Page */
+
 
 
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
@@ -357,7 +458,7 @@ h3.menu-item-title {
 
   /* Home page */
   #beer-menu-tile, #food-menu-tile {
-    width: 280px;
+    width: 200px;
     margin: 0 auto 15px;
   }
 
@@ -369,4 +470,13 @@ h3.menu-item-title {
     float: left;
     width: 100%;
   }
+  .product-item-description {
+    display: none;
+  }
+  #product-content {
+    height: 600px;
 }
+}
+
+
+
